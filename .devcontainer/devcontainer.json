@@ -1,0 +1,25 @@
+{
+  "name": "Bicep Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+      "installBicep": true
+    }
+  },
+   "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-bicep",
+                "ms-vscode.azurecli",
+                "ms-azuretools.vscode-azureresourcegroups",
+                "ms-codespaces-tools.ado-codespaces-auth",
+                "ms-azuretools.vscode-containers",
+                "redhat.ansible",
+                "ms-python.python"
+            ]
+        }
+    },
+  "postCreateCommand": "./.devcontainer/postCreate.sh"
+}
